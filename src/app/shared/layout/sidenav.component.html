@@ -1,0 +1,12 @@
+<mat-sidenav-container class="app-sidenav-container">
+  <mat-sidenav #sidenav
+    [opened]="!isScreenSmall"
+    [mode]="isScreenSmall ? 'over' : 'side'"
+    class="app-sidenav">
+    Sidenav content
+  </mat-sidenav>
+
+  <mat-sidenav-content class="app-sidenav-content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
