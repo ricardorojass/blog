@@ -2,11 +2,13 @@
   <mat-sidenav #sidenav
     [opened]="!isScreenSmall"
     [mode]="isScreenSmall ? 'over' : 'side'"
-    class="app-sidenav">
+    class="app-sidenav center ph3 pt3 bg-base-secondary white">
     Sidenav content
+    <hr>
+    <app-footer></app-footer>
   </mat-sidenav>
 
-  <mat-sidenav-content class="app-sidenav-content">
+  <mat-sidenav-content class="center bg-gray">
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

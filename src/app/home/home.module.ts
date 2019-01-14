@@ -7,6 +7,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
+import { FooterComponent } from '../shared';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { MainContentComponent } from './components/main-content/main-content.com
     MaterialModule,
     HomeRoutingModule
   ],
-  declarations: [HomeComponent, SidenavComponent, MainContentComponent]
+  declarations: [HomeComponent, SidenavComponent, MainContentComponent, FooterComponent]
 })
 export class HomeModule { }
