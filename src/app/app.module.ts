@@ -7,18 +7,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './shared/material/material.module';
 import { SharedModule } from './shared/shared.module';
-import { HomeModule } from './home/home.module';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { MainContentComponent } from './components/main-content/main-content.component';
+import { FooterComponent } from './shared';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SidenavComponent,
+    MainContentComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
-    HomeModule,
     MaterialModule,
     FlexLayoutModule
   ],
