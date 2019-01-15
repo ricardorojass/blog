@@ -10,13 +10,15 @@ import { SharedModule } from './shared/shared.module';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { FooterComponent } from './shared';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
     MainContentComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
