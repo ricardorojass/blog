@@ -358,6 +358,15 @@ THE SOFTWARE.
 
 @angular/material/sidenav
 
+@angular/forms
+MIT
+
+@angular/material/core
+
+@angular/material/list
+
+@angular/material/divider
+
 @angular/flex-layout
 MIT
 <<<<<<< HEAD
