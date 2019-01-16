@@ -2,20 +2,23 @@
   <mat-sidenav #sidenav
     [opened]="!isScreenSmall"
     [mode]="isScreenSmall ? 'over' : 'side'"
-    class="app-sidenav center pt3 bg-base-secondary white">
+    class="w15rem vh100 center pt3 bg-base-secondary white br-goldenrod">
     <h3 class="text-center">My Angular Site</h3>
-    <section class="">
-      <mat-action-list role="list">
-        <button mat-list-item routerLink="/about">
-          <span class="white">About</span>
-        </button>
-        <button mat-list-item routerLink="/">
-          <span class="white">Articles</span>
-        </button>
-      </mat-action-list>
-    </section>
-    <mat-divider class="bg-gray"></mat-divider>
-    <app-footer></app-footer>
+    <div class="flex flex-column">
+      <section>
+        <mat-action-list role="list">
+          <button mat-list-item routerLink="/about">
+            <span class="white center">About</span>
+          </button>
+          <mat-divider class="bg-dark-gray"></mat-divider>
+          <button mat-list-item routerLink="/">
+            <span class="white center">Articles</span>
+          </button>
+          <mat-divider class="bg-dark-gray"></mat-divider>
+        </mat-action-list>
+      </section>
+      <app-footer></app-footer>
+    </div>
   </mat-sidenav>
 
   <mat-sidenav-content class="center bg-gray">

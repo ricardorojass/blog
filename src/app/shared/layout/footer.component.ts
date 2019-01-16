@@ -3,10 +3,13 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-footer',
   template: `
-    <footer>
+    <footer class="flex flex-column item-center">
       <p>
-        footer works!
+        Made with
       </p>
+      <span>
+        ❤️️
+      </span>
     </footer>
   `,
   styles: []
