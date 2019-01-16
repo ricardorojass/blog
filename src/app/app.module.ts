@@ -11,6 +11,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { FooterComponent } from './shared';
 import { AboutComponent } from './components/about/about.component';
+import { ArticleListComponent } from './articles/components/article-list/article-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AboutComponent } from './components/about/about.component';
     SidenavComponent,
     MainContentComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    ArticleListComponent
   ],
   imports: [
     BrowserModule,
