@@ -8,19 +8,16 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './shared/material/material.module';
 import { SharedModule } from './shared/shared.module';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
-import { MainContentComponent } from './components/main-content/main-content.component';
 import { FooterComponent } from './shared';
 import { AboutComponent } from './components/about/about.component';
-import { ArticleListComponent } from './articles/components/article-list/article-list.component';
+import { ArticlesModule } from './articles/articles.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
-    MainContentComponent,
     FooterComponent,
-    AboutComponent,
-    ArticleListComponent
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +25,8 @@ import { ArticleListComponent } from './articles/components/article-list/article
     AppRoutingModule,
     SharedModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ArticlesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
