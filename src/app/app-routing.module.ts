@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
-import { ArticleListComponent } from './articles/components/article-list/article-list.component';
+import { ArticlesComponent } from './articles/articles.component';
 
 const routes: Routes = [
   {
     path: 'articles',
-    component: ArticleListComponent
+    component: ArticlesComponent
   },
   {
     path: 'about',
