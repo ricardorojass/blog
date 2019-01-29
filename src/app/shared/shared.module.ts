@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ArticleListComponent } from './artilcle-helpers';
 
 @NgModule({
   imports: [
@@ -11,8 +12,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   ],
   exports: [
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ArticleListComponent
   ],
-  declarations: []
+  declarations: [ArticleListComponent]
 })
 export class SharedModule { }

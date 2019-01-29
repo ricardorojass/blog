@@ -11,6 +11,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { FooterComponent } from './shared';
 import { AboutComponent } from './components/about/about.component';
 import { ArticlesModule } from './articles/articles.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ArticlesModule } from './articles/articles.module';
     SharedModule,
     MaterialModule,
     FlexLayoutModule,
+    HomeModule,
     ArticlesModule
   ],
   providers: [],

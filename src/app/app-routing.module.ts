@@ -5,23 +5,9 @@ import { ArticlesComponent } from './articles/articles.component';
 
 const routes: Routes = [
   {
-    path: 'articles',
-    component: ArticlesComponent
-  },
-  {
     path: 'about',
     component: AboutComponent
   },
-  {
-    path: '',
-    redirectTo: '/articles',
-    pathMatch: 'full'
-  },
-  {
-    path: '**',
-    redirectTo: '/articles',
-    pathMatch: 'full'
-  }
 ];
 
 @NgModule({
