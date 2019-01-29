@@ -13,4 +13,4 @@ import { ArticleComponent } from './article.component';
   ],
   declarations: [ArticleComponent]
 })
-export class ArticlesModule { }
+export class ArticleModule { }

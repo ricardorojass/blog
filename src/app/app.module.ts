@@ -10,7 +10,7 @@ import { SharedModule } from './shared/shared.module';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { FooterComponent } from './shared';
 import { AboutComponent } from './components/about/about.component';
-import { ArticlesModule } from './articles/articles.module';
+import { ArticleModule } from './article/article.module';
 import { HomeModule } from './home/home.module';
 
 @NgModule({
@@ -28,7 +28,7 @@ import { HomeModule } from './home/home.module';
     MaterialModule,
     FlexLayoutModule,
     HomeModule,
-    ArticlesModule
+    ArticleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
