@@ -9,32 +9,10 @@
           class="card w-100"
           fxFlex="0 1 calc(33.3% - 32px)"
           fxFlex.lt-md="0 1 calc(50% - 32px)"
-          fxFlex.lt-sm="100%"></app-article-preview>
-        <app-article-preview
-          class="card w-100"
-          fxFlex="0 1 calc(33.3% - 32px)"
-          fxFlex.lt-md="0 1 calc(50% - 32px)"
-          fxFlex.lt-sm="100%"></app-article-preview>
-        <app-article-preview
-          class="card w-100"
-          fxFlex="0 1 calc(33.3% - 32px)"
-          fxFlex.lt-md="0 1 calc(50% - 32px)"
-          fxFlex.lt-sm="100%"></app-article-preview>
-        <app-article-preview
-          class="card w-100"
-          fxFlex="0 1 calc(33.3% - 32px)"
-          fxFlex.lt-md="0 1 calc(50% - 32px)"
-          fxFlex.lt-sm="100%"></app-article-preview>
-        <app-article-preview
-          class="card w-100"
-          fxFlex="0 1 calc(33.3% - 32px)"
-          fxFlex.lt-md="0 1 calc(50% - 32px)"
-          fxFlex.lt-sm="100%"></app-article-preview>
-        <app-article-preview
-          class="card w-100"
-          fxFlex="0 1 calc(33.3% - 32px)"
-          fxFlex.lt-md="0 1 calc(50% - 32px)"
-          fxFlex.lt-sm="100%"></app-article-preview>
+          fxFlex.lt-sm="100%"
+          *ngFor="let article of articles"
+          [article]="article"></app-article-preview>
+
       </ng-container>
     </div>
 </div>

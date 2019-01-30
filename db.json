@@ -1,19 +1,60 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
+  "articles": {
+    "data": [
+      {
+        "id": 1,
+        "title": "Domain Driving Design",
+        "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatem et possimus distinctio voluptas. Ea nesciunt nemo ullam. Facere deleniti laborum ipsum natus porro omnis quis cumque aspernatur velit labore.",
+        "img": "https://via.placeholder.com/150x100?text=DDD",
+        "createdAt": "2019-01-23T18:25:43.511Z",
+        "updatedAt": "20129-01-30T18:25:43.511Z",
+        "author": "Ricardo Rojas"
+      },
+      {
+        "id": 2,
+        "title": "Angular with Github pages",
+        "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatem et possimus distinctio voluptas. Ea nesciunt nemo ullam. Facere deleniti laborum ipsum natus porro omnis quis cumque aspernatur velit labore.",
+        "img": "https://via.placeholder.com/150x100?text=GH Pages",
+        "createdAt": "2019-01-23T18:25:43.511Z",
+        "updatedAt": "20129-01-30T18:25:43.511Z",
+        "author": "Ricardo Rojas"
+      },
+      {
+        "id": 3,
+        "title": "Flex Layout in Angular",
+        "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatem et possimus distinctio voluptas. Ea nesciunt nemo ullam. Facere deleniti laborum ipsum natus porro omnis quis cumque aspernatur velit labore.",
+        "img": "https://via.placeholder.com/150x100?text=Flex",
+        "createdAt": "2019-01-23T18:25:43.511Z",
+        "updatedAt": "20129-01-30T18:25:43.511Z",
+        "author": "Ricardo Rojas"
+      },
+      {
+        "id": 4,
+        "title": "Self improvement",
+        "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatem et possimus distinctio voluptas. Ea nesciunt nemo ullam. Facere deleniti laborum ipsum natus porro omnis quis cumque aspernatur velit labore.",
+        "img": "https://via.placeholder.com/150x100?text=Improvement",
+        "createdAt": "2019-01-23T18:25:43.511Z",
+        "updatedAt": "20129-01-30T18:25:43.511Z",
+        "author": "Ricardo Rojas"
+      },
+      {
+        "id": 5,
+        "title": "How to be more confidence",
+        "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatem et possimus distinctio voluptas. Ea nesciunt nemo ullam. Facere deleniti laborum ipsum natus porro omnis quis cumque aspernatur velit labore.",
+        "img": "https://via.placeholder.com/150x100?text=Confidence",
+        "createdAt": "2019-01-23T18:25:43.511Z",
+        "updatedAt": "20129-01-30T18:25:43.511Z",
+        "author": "Ricardo Rojas"
+      },
+      {
+        "id": 6,
+        "title": "From Rails to Angular",
+        "body": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatem et possimus distinctio voluptas. Ea nesciunt nemo ullam. Facere deleniti laborum ipsum natus porro omnis quis cumque aspernatur velit labore.",
+        "img": "https://via.placeholder.com/150x100?text=Rails",
+        "createdAt": "2019-01-23T18:25:43.511Z",
+        "updatedAt": "20129-01-30T18:25:43.511Z",
+        "author": "Ricardo Rojas"
+      }
+    ]
   }
 }

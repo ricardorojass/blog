@@ -17,7 +17,6 @@ import { CoreModule } from './core/core.module';
 @NgModule({
   declarations: [
     AppComponent,
-    CoreModule,
     SidenavComponent,
     FooterComponent,
     AboutComponent,
@@ -25,6 +24,7 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    CoreModule,
     AppRoutingModule,
     SharedModule,
     MaterialModule,

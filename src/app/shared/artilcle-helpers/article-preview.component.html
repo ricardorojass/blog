@@ -1,10 +1,10 @@
 <mat-card>
-  <!-- <a [routerLink]="['/article', article]"></a> -->
-  <img
-    mat-card-image
-    src="https://via.placeholder.com/150x100?text=DDD"
-    alt="DDD"/>
-  <mat-card-header>
-    <mat-card-title>Domain Driven Design</mat-card-title>
-  </mat-card-header>
+  <a>
+    <img
+      mat-card-image
+      src="{{ article.img }}"/>
+    <mat-card-header>
+      <mat-card-title>{{ article.title }}</mat-card-title>
+    </mat-card-header>
+  </a>
 </mat-card>
