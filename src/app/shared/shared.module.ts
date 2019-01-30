@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ArticleListComponent } from './artilcle-helpers';
+import { ArticlePreviewComponent } from './artilcle-helpers/article-preview.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { ArticleListComponent } from './artilcle-helpers';
     FlexLayoutModule,
     ArticleListComponent
   ],
-  declarations: [ArticleListComponent]
+  declarations: [ArticleListComponent, ArticlePreviewComponent]
 })
 export class SharedModule { }
