@@ -12,10 +12,12 @@ import { FooterComponent } from './shared';
 import { AboutComponent } from './components/about/about.component';
 import { ArticleModule } from './article/article.module';
 import { HomeModule } from './home/home.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CoreModule,
     SidenavComponent,
     FooterComponent,
     AboutComponent,
