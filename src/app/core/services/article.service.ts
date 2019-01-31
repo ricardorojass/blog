@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
 import { Observable } from 'rxjs';
 import { Article } from '../models';
-import { map } from 'rxjs/operators';
+import { map, tap, delay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -27,12 +27,15 @@ export class ArticleService {
 
   getAll(): Observable<Article[]> {
     return this.apiService.get('/articles')
-      .pipe(map(data => data.data));
+      .pipe(
+        delay(1000),
+        map(data => data)
+      );
   }
 
   get(id): Observable<Article> {
-    return this.apiService.get('/articles' + id)
-      .pipe(map(data => data.article));
+    return this.apiService.get('/articles/' + id)
+      .pipe(map(data => data));
   }
 
   destroy(id) {

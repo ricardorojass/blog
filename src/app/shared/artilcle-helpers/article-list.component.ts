@@ -22,8 +22,6 @@ export class ArticleListComponent implements OnInit {
     this.loading = true;
     this.articlesService.getAll()
       .subscribe(data => {
-        console.log('data', data);
-
         this.loading = false;
         this.articles = data;
       });

@@ -10,7 +10,6 @@ import { SharedModule } from './shared/shared.module';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { FooterComponent } from './shared';
 import { AboutComponent } from './components/about/about.component';
-import { ArticleModule } from './article/article.module';
 import { HomeModule } from './home/home.module';
 import { CoreModule } from './core/core.module';
 
@@ -30,7 +29,6 @@ import { CoreModule } from './core/core.module';
     MaterialModule,
     FlexLayoutModule,
     HomeModule,
-    ArticleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

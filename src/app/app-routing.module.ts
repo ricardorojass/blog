@@ -7,11 +7,14 @@ const routes: Routes = [
     path: 'about',
     component: AboutComponent
   },
+  {
+    path: 'article',
+    loadChildren: './article/article.module#ArticleModule'
+  }
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, {
+  imports: [RouterModule.forRoot(routes, {
       preloadingStrategy: PreloadAllModules
     })
   ],

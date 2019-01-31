@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Article } from '../core/models';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-article',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./article.component.scss']
 })
 export class ArticleComponent implements OnInit {
+  article: Article;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
+    this.route.data.subscribe(
+      (data: { article: Article }) => {
+        this.article = data.article;
+      }
+    );
   }
 
 }

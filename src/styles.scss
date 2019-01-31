@@ -1,8 +1,11 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import './util';
 
+a {text-decoration: none}
+
 body {
   margin: 0;
+  font-size: 16px;
 }
 
 .bg-gray {
@@ -24,6 +27,10 @@ body {
 
 .eh-mw9 {
   max-width: 50rem;
+}
+
+.eh-mw6 {
+  max-width: 40rem;
 }
 
 .w-100 {
@@ -71,7 +78,7 @@ body {
 }
 
 .pt5 {
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .ph3 {

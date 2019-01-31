@@ -1,6 +1,6 @@
 <div class="bg-gray center w-100 vh-100">
     <div
-      class="eh-mw9 center w-100 pt3 ph3"
+      class="eh-mw9 center w-100 pt5 ph3"
       fxLayout="row wrap"
       fxLayout.lt-sm="column"
       fxLayoutAlign="space-evenly start">
@@ -13,6 +13,10 @@
           *ngFor="let article of articles"
           [article]="article"></app-article-preview>
 
+          <div class="app-article-preview"
+            [hidden]="!loading">
+              Loading articles...
+          </div>
       </ng-container>
     </div>
 </div>

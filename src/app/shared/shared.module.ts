@@ -6,19 +6,26 @@ import { MaterialModule } from './material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ArticleListComponent } from './artilcle-helpers';
 import { ArticlePreviewComponent } from './artilcle-helpers/article-preview.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
+  ],
+  declarations: [
+    ArticleListComponent,
+    ArticlePreviewComponent
   ],
   exports: [
     MaterialModule,
     FlexLayoutModule,
-    ArticleListComponent
-  ],
-  declarations: [ArticleListComponent, ArticlePreviewComponent]
+    ArticleListComponent,
+    ArticlePreviewComponent,
+    RouterModule
+  ]
 })
 export class SharedModule { }

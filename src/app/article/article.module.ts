@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ArticleRoutingModule } from './article-routing.module';
 import { SharedModule } from '../shared';
 import { ArticleComponent } from './article.component';
+import { ArticleResolver } from './article-resolver.service';
 
 @NgModule({
   imports: [
@@ -11,6 +12,9 @@ import { ArticleComponent } from './article.component';
     ArticleRoutingModule,
     SharedModule
   ],
-  declarations: [ArticleComponent]
+  declarations: [ArticleComponent],
+  providers: [
+    ArticleResolver
+  ]
 })
 export class ArticleModule { }
