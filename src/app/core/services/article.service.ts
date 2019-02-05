@@ -38,6 +38,11 @@ export class ArticleService {
       .pipe(map(data => data));
   }
 
+  edit(id): Observable<Article> {
+    return this.apiService.get('/articles/' + id)
+      .pipe(map(data => data));
+  }
+
   destroy(id) {
     return this.apiService.delete('/articles/' + id);
   }

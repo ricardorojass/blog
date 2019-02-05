@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ArticleRoutingModule } from './article-routing.module';
-import { SharedModule } from '../shared';
-import { ArticleComponent } from './article.component';
+import { SharedModule } from '../../shared';
+import { ArticleComponent } from './pages/show/show.component';
 import { ArticleResolver } from './article-resolver.service';
+import { EditComponent } from './pages/edit/edit.component';
+import { EditResolver } from './pages/edit/edit-resolver.service';
 
 @NgModule({
   imports: [
@@ -12,9 +14,10 @@ import { ArticleResolver } from './article-resolver.service';
     ArticleRoutingModule,
     SharedModule
   ],
-  declarations: [ArticleComponent],
+  declarations: [ArticleComponent, EditComponent],
   providers: [
-    ArticleResolver
+    ArticleResolver,
+    EditResolver,
   ]
 })
 export class ArticleModule { }

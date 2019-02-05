@@ -1,7 +1,10 @@
 <div class="article-page bg-gray center vh-100 ph3">
   <div class="banner eh-mv9 center pt3 text-center">
     <h1>{{ article.title }}</h1>
-    <img class="pt3" src="{{ article.img }}" alt="">
+    <button mat-button [routerLink]="['/article/', article.id, 'edit']">Edit Article</button>
+    <div>
+      <img class="pt3" src="{{ article.img }}" alt="">
+    </div>
   </div>
 
   <div class="content eh-mw6 center w-100 pt5">

@@ -10,7 +10,7 @@ import { SharedModule } from './shared/shared.module';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { FooterComponent } from './shared';
 import { AboutComponent } from './components/about/about.component';
-import { HomeModule } from './home/home.module';
+import { HomeModule } from './modules/home/home.module';
 import { CoreModule } from './core/core.module';
 
 @NgModule({

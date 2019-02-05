@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ArticleComponent } from './article.component';
+import { ArticleComponent } from './pages/show/show.component';
 import { ArticleResolver } from './article-resolver.service';
+import { EditComponent } from './pages/edit/edit.component';
+import { EditResolver } from './pages/edit/edit-resolver.service';
 
 const routes: Routes = [
   {
@@ -10,7 +12,14 @@ const routes: Routes = [
     resolve: {
       article: ArticleResolver,
     }
-  }
+  },
+  {
+    path: ':id/edit',
+    component: EditComponent,
+    resolve: {
+      article: EditResolver,
+    }
+  },
 ];
 
 @NgModule({

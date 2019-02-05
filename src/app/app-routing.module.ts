@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'article',
-    loadChildren: './article/article.module#ArticleModule'
+    loadChildren: './modules/articles/article.module#ArticleModule'
   }
 ];
 
