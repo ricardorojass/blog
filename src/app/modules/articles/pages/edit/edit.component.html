@@ -5,11 +5,7 @@
             <mat-tab label="Edit">
               <form [formGroup]="editForm" class="eh-mv6 pt3">
                 <fieldset [disabled]="isSubmitting" class="flex flex-column">
-                  <fieldset>
-                    <input class="w-100" matInput type="text"
-                      formControlName="title"
-                      [(ngModel)]="article.title">
-                  </fieldset>
+
                   <fieldset>
                     <textarea class="w-100" type="text"
                       formControlName="body"
@@ -25,7 +21,11 @@
                 </fieldset>
               </form>
             </mat-tab>
-            <mat-tab label="Preview"> Content 2 </mat-tab>
+            <mat-tab label="Preview">
+              <markdown>
+                {{ article.body }}
+              </markdown>
+            </mat-tab>
           </mat-tab-group>
     </div>
 </div>

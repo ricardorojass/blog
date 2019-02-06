@@ -8,6 +8,7 @@ import { ArticleComponent } from './pages/show/show.component';
 import { ArticleResolver } from './article-resolver.service';
 import { EditComponent } from './pages/edit/edit.component';
 import { EditResolver } from './pages/edit/edit-resolver.service';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { EditResolver } from './pages/edit/edit-resolver.service';
     ArticleRoutingModule,
     SharedModule,
     ReactiveFormsModule,
+    MarkdownModule.forRoot(),
   ],
   declarations: [ArticleComponent, EditComponent],
   providers: [

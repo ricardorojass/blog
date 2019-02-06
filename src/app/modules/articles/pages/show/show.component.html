@@ -1,13 +1,7 @@
 <div class="article-page bg-gray center vh-100 ph3">
-  <div class="banner eh-mv9 center pt3 text-center">
-    <h1>{{ article.title }}</h1>
-    <button mat-button [routerLink]="['/article/', article.id, 'edit']">Edit Article</button>
-    <div>
-      <img class="pt3" src="{{ article.img }}" alt="">
-    </div>
-  </div>
+  <button mat-button [routerLink]="['/article/', article.id, 'edit']">Edit Article</button>
 
-  <div class="content eh-mw6 center w-100 pt5">
-    <div [innerHTML]="article.body"></div>
+  <div class="content eh-mw6 center w-100 pt3">
+    <markdown lineNumbers [start]="1" [src]="article.path"></markdown>
   </div>
 </div>
