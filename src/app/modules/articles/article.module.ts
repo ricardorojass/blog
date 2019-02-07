@@ -9,6 +9,8 @@ import { ArticleResolver } from './article-resolver.service';
 import { EditComponent } from './pages/edit/edit.component';
 import { EditResolver } from './pages/edit/edit-resolver.service';
 import { MarkdownModule } from 'ngx-markdown';
+import { FormComponent } from './components/form.component';
+import { NewComponent } from './pages/new/new.component';
 
 @NgModule({
   imports: [
@@ -18,7 +20,7 @@ import { MarkdownModule } from 'ngx-markdown';
     ReactiveFormsModule,
     MarkdownModule.forRoot(),
   ],
-  declarations: [ArticleComponent, EditComponent],
+  declarations: [ArticleComponent, EditComponent, FormComponent, NewComponent],
   providers: [
     ArticleResolver,
     EditResolver,

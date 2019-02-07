@@ -12,6 +12,7 @@ import { FooterComponent } from './shared';
 import { AboutComponent } from './components/about/about.component';
 import { HomeModule } from './modules/home/home.module';
 import { CoreModule } from './core/core.module';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CoreModule } from './core/core.module';
     SidenavComponent,
     FooterComponent,
     AboutComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,

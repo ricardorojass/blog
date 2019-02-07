@@ -1,0 +1,25 @@
+.form-page {
+  fieldset {
+    border: 0;
+    padding: 0;
+    margin-bottom: 1em;
+
+    input[type=text] {
+      background-color: transparent;
+      font-size: 1em;
+      padding: 1em;
+      box-sizing: border-box;
+    }
+
+    input[type=text]:focus {
+      border: 0;
+    }
+
+    textarea {
+      font-size: 1em;
+      background-color: transparent;
+      box-sizing: border-box;
+      padding: 1em;
+    }
+  }
+}

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Domain Driving Design",
-      "body": "# Testing markdown from json",
+      "body": "# Testing markdown from json --- Posted by [Ricardo] on February 6, 2019 ![alt text](https://via.placeholder.com/800x150?text=DDD 'Domain Drive Design') lorem ipsum",
       "path": "./assets/blog/post/ddd.md",
       "thumbnail": "https://via.placeholder.com/150x100?text=DDD",
       "img": "https://via.placeholder.com/1000x150?text=DDD",

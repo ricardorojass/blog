@@ -43,7 +43,6 @@ export class EditComponent implements OnInit {
       delay(4000)
     ).subscribe((x) => {
       this.isSubmitting = false;
-      console.log('submit', x);
     });
 
   }

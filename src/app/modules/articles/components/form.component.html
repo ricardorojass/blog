@@ -1,0 +1,29 @@
+<div class="form-page">
+  <mat-tab-group>
+    <mat-tab label="Edit">
+      <form [formGroup]="form" class="pt3">
+        <fieldset [disabled]="isSubmitting" class="flex flex-column">
+
+          <fieldset>
+            <textarea class="w-100" type="text"
+              formControlName="body"
+              rows="20"
+              placeholder="What is your story? (in markdown)"
+              ([ngModel])="article.body"
+              (ngModelChange)="onChange(form.value)">
+            </textarea>
+          </fieldset>
+
+          <button mat-flat-button
+            [disabled]="isSubmitting"
+            color="primary"
+            type="button"
+            (click)="submitForm()">Submit</button>
+        </fieldset>
+      </form>
+    </mat-tab>
+    <mat-tab label="Preview">
+      <markdown [data]="article.body"></markdown>
+    </mat-tab>
+  </mat-tab-group>
+</div>
