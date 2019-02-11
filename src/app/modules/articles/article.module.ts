@@ -4,8 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { ArticleRoutingModule } from './article-routing.module';
 import { SharedModule } from '../../shared';
-import { ArticleComponent } from './pages/show/show.component';
-import { ArticleResolver } from './article-resolver.service';
+import { ShowComponent } from './pages/show/show.component';
+import { ShowResolver } from './pages/show/show-resolver.service';
 import { EditComponent } from './pages/edit/edit.component';
 import { EditResolver } from './pages/edit/edit-resolver.service';
 import { MarkdownModule } from 'ngx-markdown';
@@ -20,9 +20,9 @@ import { NewComponent } from './pages/new/new.component';
     ReactiveFormsModule,
     MarkdownModule.forRoot(),
   ],
-  declarations: [ArticleComponent, EditComponent, FormComponent, NewComponent],
+  declarations: [ShowComponent, EditComponent, FormComponent, NewComponent],
   providers: [
-    ArticleResolver,
+    ShowResolver,
     EditResolver,
   ]
 })

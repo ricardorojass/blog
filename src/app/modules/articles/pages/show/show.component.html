@@ -2,6 +2,6 @@
   <button mat-button [routerLink]="['/article/', article.id, 'edit']">Edit Article</button>
 
   <div class="content eh-mw6 center w-100 pt3">
-    <markdown lineNumbers [start]="1" [src]="article.path"></markdown>
+    <markdown lineNumbers [start]="1" [data]="article.body"></markdown>
   </div>
 </div>

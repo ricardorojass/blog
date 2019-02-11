@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './show.component.html',
   styleUrls: ['./show.component.scss']
 })
-export class ArticleComponent implements OnInit {
+export class ShowComponent implements OnInit {
   article: Article;
 
   constructor(

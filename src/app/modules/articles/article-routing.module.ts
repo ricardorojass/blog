@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ArticleComponent } from './pages/show/show.component';
-import { ArticleResolver } from './article-resolver.service';
+import { ShowComponent } from './pages/show/show.component';
+import { ShowResolver } from './pages/show/show-resolver.service';
 import { EditComponent } from './pages/edit/edit.component';
 import { EditResolver } from './pages/edit/edit-resolver.service';
 import { NewComponent } from './pages/new/new.component';
@@ -13,9 +13,9 @@ const routes: Routes = [
   },
   {
     path: ':id',
-    component: ArticleComponent,
+    component: ShowComponent,
     resolve: {
-      article: ArticleResolver,
+      article: ShowResolver,
     }
   },
   {
