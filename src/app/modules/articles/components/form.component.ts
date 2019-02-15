@@ -17,7 +17,6 @@ export class FormComponent implements OnInit {
   form: FormGroup;
   errors: Object = {};
   isSubmitting = false;
-  markdown: string;
 
   constructor(
     private articlesService: ArticleService,
@@ -30,7 +29,6 @@ export class FormComponent implements OnInit {
 
   ngOnInit() {
     // If there's an article prefetched, load it
-    this.markdown = this.form.value.body;
     this.route.data.subscribe((data: { article: Article }) => {
       if (data.article) {
         this.article = data.article;
@@ -41,6 +39,7 @@ export class FormComponent implements OnInit {
 
   createForm(): void {
     this.form = this.fb.group({
+      title: '',
       body: '',
     });
   }
@@ -52,20 +51,15 @@ export class FormComponent implements OnInit {
     this.updateArticle(this.form.value);
 
     // Post the changes
-    // this.articlesService.save(this.article).subscribe(
-    //   article => this.router.navigateByUrl('article' + article.id),
-    //   err => {
-    //     this.errors = err;
-    //     this.isSubmitting = false;
-    //   }
-    // );
-    this.isSubmitting = true;
-    of(this.form.value).pipe(
-      delay(4000)
-    ).subscribe((x) => {
-      this.isSubmitting = false;
-      console.log('submit', x);
-    });
+    this.articlesService.save(this.article).subscribe(
+      article => {
+        this.router.navigateByUrl('article/' + article.title);
+      },
+      err => {
+        this.errors = err;
+        this.isSubmitting = false;
+      }
+    );
   }
 
   updateArticle(values: Object): void {

@@ -5,11 +5,16 @@
         <fieldset [disabled]="isSubmitting" class="flex flex-column">
 
           <fieldset>
+            <input class="w-100"
+              type="text"
+              formControlName="title"
+              placeholder="Title">
+          </fieldset>
+          <fieldset>
             <textarea class="w-100" type="text"
               formControlName="body"
               rows="20"
               placeholder="What is your story? (in markdown)"
-              ([ngModel])="article.body"
               (ngModelChange)="onChange(form.value)">
             </textarea>
           </fieldset>

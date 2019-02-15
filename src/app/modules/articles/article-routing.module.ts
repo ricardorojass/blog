@@ -12,14 +12,14 @@ const routes: Routes = [
     component: NewComponent,
   },
   {
-    path: ':id',
+    path: ':title',
     component: ShowComponent,
     resolve: {
       article: ShowResolver,
     }
   },
   {
-    path: ':id/edit',
+    path: ':title/edit',
     component: EditComponent,
     resolve: {
       article: EditResolver,

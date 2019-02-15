@@ -4,7 +4,7 @@ import { ApiService, ArticleService } from './services';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
   ],
   providers: [
     ApiService,

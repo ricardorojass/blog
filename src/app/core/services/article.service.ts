@@ -15,35 +15,35 @@ export class ArticleService {
   save(article): Observable<Article> {
     // If we're updating an existing article
     if (article.id) {
-      return this.apiService.put('/articles/' + article.id, {article: article})
+      return this.apiService.put('articles/' + article.id, {article: article})
         .pipe(map(data => data.article));
 
     // Otherwise, create a new article
     } else {
-      return this.apiService.post('/articles/', {article: article})
-        .pipe(map(data => data.article));
+      return this.apiService.post('article/new', article)
+        .pipe(map(data => data));
     }
   }
 
   getAll(): Observable<Article[]> {
-    return this.apiService.get('/articles')
+    return this.apiService.get('articles')
       .pipe(
         delay(1000),
         map(data => data)
       );
   }
 
-  get(id): Observable<Article> {
-    return this.apiService.get('/articles/' + id)
+  get(title): Observable<Article> {
+    return this.apiService.get('article/' + title)
       .pipe(map(data => data));
   }
 
-  edit(id): Observable<Article> {
-    return this.apiService.get('/articles/' + id)
+  edit(title): Observable<Article> {
+    return this.apiService.get(`${title}/edit`)
       .pipe(map(data => data));
   }
 
   destroy(id) {
-    return this.apiService.delete('/articles/' + id);
+    return this.apiService.delete('articles/' + id);
   }
 }

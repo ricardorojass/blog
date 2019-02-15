@@ -1,8 +1,5 @@
 <mat-card>
-  <a [routerLink]="['/article', article.id]" class= "preview-link">
-    <img
-      mat-card-image
-      src="{{ article.thumbnail }}"/>
+  <a [routerLink]="['article/', article.title]" class= "preview-link">
       <h1>{{ article.title }}</h1>
   </a>
 </mat-card>

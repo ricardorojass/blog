@@ -1,11 +1,5 @@
 export interface Article {
-  id: number;
+  id: string;
   title: string;
   body: string;
-  path: string;
-  img: string;
-  thumbnail: string;
-  createdAt: Date;
-  updatedAt: Date;
-  author: string;
 }
