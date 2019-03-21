@@ -26,15 +26,15 @@ export class ArticleService {
   }
 
   getAll(): Observable<Article[]> {
-    return this.apiService.get('articles')
+    return this.apiService.get('stories')
       .pipe(
         delay(1000),
-        map(data => data)
+        map(data => data.stories)
       );
   }
 
-  get(title): Observable<Article> {
-    return this.apiService.get('article/' + title)
+  get(id): Observable<Article> {
+    return this.apiService.get('stories/' + id)
       .pipe(map(data => data));
   }
 

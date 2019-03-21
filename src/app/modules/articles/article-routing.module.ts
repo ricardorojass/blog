@@ -12,7 +12,7 @@ const routes: Routes = [
     component: NewComponent,
   },
   {
-    path: ':title',
+    path: ':id',
     component: ShowComponent,
     resolve: {
       article: ShowResolver,
