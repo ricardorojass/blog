@@ -53,7 +53,8 @@ export class FormComponent implements OnInit {
     // Post the changes
     this.articlesService.save(this.article).subscribe(
       article => {
-        this.router.navigateByUrl('article/' + article.title);
+        // this.router.navigateByUrl('article/' + article._id);
+      console.log(this.article);
       },
       err => {
         this.errors = err;

@@ -19,7 +19,7 @@ const routes: Routes = [
     }
   },
   {
-    path: ':title/edit',
+    path: ':id/edit',
     component: EditComponent,
     resolve: {
       article: EditResolver,

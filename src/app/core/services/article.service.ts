@@ -14,13 +14,13 @@ export class ArticleService {
 
   save(article): Observable<Article> {
     // If we're updating an existing article
-    if (article.id) {
-      return this.apiService.put('articles/' + article.id, {article: article})
+    if (article._id) {
+      return this.apiService.patch(`stories/${article._id}`, {article: article})
         .pipe(map(data => data.article));
 
     // Otherwise, create a new article
     } else {
-      return this.apiService.post('article/new', article)
+      return this.apiService.post(`stories/${article._id}`, {article: article})
         .pipe(map(data => data));
     }
   }
@@ -35,11 +35,6 @@ export class ArticleService {
 
   get(id): Observable<Article> {
     return this.apiService.get('stories/' + id)
-      .pipe(map(data => data));
-  }
-
-  edit(title): Observable<Article> {
-    return this.apiService.get(`${title}/edit`)
       .pipe(map(data => data));
   }
 
