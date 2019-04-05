@@ -1,15 +1,12 @@
 <div class="bg-gray center w-100 vh-100">
     <div
-      class="eh-mw9 center w-100 pt5 ph3"
-      fxLayout="row wrap"
-      fxLayout.lt-sm="column"
-      fxLayoutAlign="space-evenly start">
+      class="eh-mw6 center w-100 pt5 ph3"
+      fxLayout="column">
       <ng-container>
+        <h1>Blog</h1>
         <app-article-preview
           class="card w-100"
-          fxFlex="0 1 calc(33.3% - 32px)"
-          fxFlex.lt-md="0 1 calc(50% - 32px)"
-          fxFlex.lt-sm="100%"
+          fxFlex="0 1 100%"
           *ngFor="let article of articles"
           [article]="article"></app-article-preview>
 
