@@ -9,7 +9,7 @@ import { NewComponent } from './pages/new/new.component';
 const routes: Routes = [
   {
     path: 'new',
-    component: NewComponent,
+    component: NewComponent
   },
   {
     path: ':id',

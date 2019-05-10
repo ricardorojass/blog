@@ -16,11 +16,11 @@ export class ArticleService {
     // If we're updating an existing article
     if (article._id) {
       return this.apiService.patch(`stories/${article._id}`, {article: article})
-        .pipe(map(data => data.article));
+        .pipe(map(data => data));
 
     // Otherwise, create a new article
     } else {
-      return this.apiService.post(`stories/${article._id}`, {article: article})
+      return this.apiService.post('stories', {article: article})
         .pipe(map(data => data));
     }
   }

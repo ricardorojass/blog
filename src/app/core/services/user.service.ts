@@ -26,8 +26,6 @@ export class UserService {
   // This runs once on application startup.
   populate() {
     // If JWT detected, attempt to get & store user's info
-    console.log('populate');
-
     if (this.jwtService.getToken()) {
       this.apiService.get('user')
       .subscribe(
