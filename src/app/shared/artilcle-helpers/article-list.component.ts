@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ArticleService } from 'src/app/core/services';
 import { Article } from 'src/app/core/models';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-article-list',
@@ -9,22 +10,11 @@ import { Article } from 'src/app/core/models';
   styleUrls: ['./article-list.component.scss']
 })
 export class ArticleListComponent implements OnInit {
-  loading = false;
-  articles: Article[];
+  articles$: Observable<Article[]>;
 
   constructor(private articlesService: ArticleService) { }
 
   ngOnInit() {
-    this.getArticles();
+    this.articles$ = this.articlesService.getAll();
   }
-
-  getArticles(): void {
-    this.loading = true;
-    this.articlesService.getAll()
-      .subscribe(data => {
-        this.loading = false;
-        this.articles = data;
-      });
-  }
-
 }

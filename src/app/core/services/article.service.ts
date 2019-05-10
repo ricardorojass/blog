@@ -29,7 +29,7 @@ export class ArticleService {
     return this.apiService.get('stories')
       .pipe(
         delay(1000),
-        map(data => data.stories)
+        map(data => data.stories.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()))
       );
   }
 

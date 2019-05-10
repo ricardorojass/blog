@@ -6,4 +6,6 @@ export interface Article {
   body: string;
   owner: string;
   author: Profile;
+  createdAt: string;
+  upadtedAt: string;
 }
