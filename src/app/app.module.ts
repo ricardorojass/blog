@@ -13,6 +13,7 @@ import { AboutComponent } from './components/about/about.component';
 import { HomeModule } from './modules/home/home.module';
 import { CoreModule } from './core/core.module';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
     MaterialModule,
     FlexLayoutModule,
     HomeModule,
+    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

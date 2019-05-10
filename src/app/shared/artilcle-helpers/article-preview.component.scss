@@ -1,7 +1,17 @@
 .preview-link {
-  h1 {
-    color: #000;
-    font-size: 1.1em;
-    font-weight: 400;
-  }
+	height: 150px;
+
+	h3 {
+		color: #000;
+		font-size: 1.1em;
+		font-weight: 400;
+	}
+
+	p {
+		/* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		overflow: hidden;
+	}
 }

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  api_url: 'http://localhost:3000/'
+  // api_url: 'https://richi-blog-api.herokuapp.com/api/'
+  api_url: 'http://localhost:3000/api/'
 };
 
 /*

@@ -7,6 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ArticleListComponent } from './artilcle-helpers';
 import { ArticlePreviewComponent } from './artilcle-helpers/article-preview.component';
 import { RouterModule } from '@angular/router';
+import { ShowAuthedDirective } from './directives/show-authed.directive';
 
 @NgModule({
   imports: [
@@ -18,14 +19,16 @@ import { RouterModule } from '@angular/router';
   ],
   declarations: [
     ArticleListComponent,
-    ArticlePreviewComponent
+    ArticlePreviewComponent,
+    ShowAuthedDirective,
   ],
   exports: [
     MaterialModule,
     FlexLayoutModule,
     ArticleListComponent,
     ArticlePreviewComponent,
-    RouterModule
+    RouterModule,
+    ShowAuthedDirective
   ]
 })
 export class SharedModule { }

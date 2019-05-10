@@ -1,3 +1,13 @@
 <mat-toolbar color="primary">
-  <button mat-flat-button [routerLink]="['/article/new']">Create Article</button>
+  <div class="eh-mv9">
+
+    <div *appShowAuthed="false">
+      <button mat-button [routerLink]="['/login']">Login</button>
+    </div>
+
+    <div *appShowAuthed="true">
+      <button mat-flat-button [routerLink]="['/article/new']">Create Article</button>
+      <button mat-button [routerLink]="['/logout']">Logout</button>
+    </div>
+  </div>
 </mat-toolbar>

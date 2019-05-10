@@ -1,7 +1,12 @@
 <div class="article-page bg-gray center vh-100 ph3">
-  <button mat-button [routerLink]="['/article/', article.title, 'edit']">Edit Article</button>
+	<div class="pt3">
+		<button *appShowAuthed="true"
+			mat-flat-button
+			color="accent"
+			[routerLink]="['/article', article._id, 'edit']">Edit Article</button>
+	</div>
 
-  <div class="content eh-mw6 center w-100 pt3">
-    <markdown lineNumbers [start]="1" [data]="article.body"></markdown>
-  </div>
+	<div class="content eh-mw6 center w-100 pt3">
+	<markdown lineNumbers [start]="1" [data]="article.body"></markdown>
+	</div>
 </div>

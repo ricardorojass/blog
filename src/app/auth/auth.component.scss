@@ -1,0 +1,32 @@
+.auth-page {
+  fieldset {
+    border: 0;
+    padding: 0;
+    margin-bottom: 1em;
+
+    input {
+      background-color: #e3e8eb;
+      font-size: 1em;
+      padding: 1em;
+      box-sizing: border-box;
+    }
+
+    input {
+      border: 0;
+    }
+  }
+
+  h1, h3 {
+    font-weight: 300;
+  }
+
+  h1 { color: #636363; }
+
+  .form {
+    width: 480px;
+    padding: 4rem;
+    background: #fafafa;
+    border: 1px solid #ebebeb;
+    box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+  }
+}

@@ -1,0 +1,32 @@
+<div class="auth-page bg-gray center w-100 vh-100">
+  <div
+    class="eh-mv9 center w-100 pt5">
+      <div class="text-center flex-column">
+        <h1>Login</h1>
+        <h3>By Ricardo Rojas 💛</h3>
+      </div>
+
+      <div class="form center">
+        <form [formGroup]="authForm">
+          <fieldset>
+            <input class="w-100 "
+              type="text"
+              formControlName="email"
+              placeholder="Enter your email">
+          </fieldset>
+          <fieldset>
+            <input class="w-100 b-radius4"
+              type="password"
+              formControlName="password"
+              placeholder="Password">
+          </fieldset>
+
+          <button mat-flat-button
+            class="w-100"
+            [disabled]="isSubmitting"
+            color="primary"
+            (click)="submitForm()">Submit</button>
+        </form>
+      </div>
+  </div>
+</div>

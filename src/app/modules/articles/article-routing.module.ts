@@ -9,17 +9,17 @@ import { NewComponent } from './pages/new/new.component';
 const routes: Routes = [
   {
     path: 'new',
-    component: NewComponent,
+    component: NewComponent
   },
   {
-    path: ':title',
+    path: ':id',
     component: ShowComponent,
     resolve: {
       article: ShowResolver,
     }
   },
   {
-    path: ':title/edit',
+    path: ':id/edit',
     component: EditComponent,
     resolve: {
       article: EditResolver,

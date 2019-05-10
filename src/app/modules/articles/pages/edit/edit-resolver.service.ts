@@ -14,7 +14,7 @@ export class EditResolver implements Resolve<Article> {
     ) {}
 
   resolve(route: ActivatedRouteSnapshot): Observable<any> {
-    return this.articlesService.edit(route.params['title'])
+    return this.articlesService.get(route.params['id'])
       .pipe(catchError((err) => this.router.navigateByUrl('/')));
   }
 }
