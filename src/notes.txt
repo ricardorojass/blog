@@ -1,0 +1,5 @@
+# Your own blog with MEAN STACK
+
+![alt text](assets/images/mean-stack.png "Mean Stack")
+
+This is the first test writing a story in my blog made with _mean stack_, i'm writing in markdown with a preview, it feels fantastic because is something made with myself, I hope to enjoy, learn and share a lot with this cool tool.
