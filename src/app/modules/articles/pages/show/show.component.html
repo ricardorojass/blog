@@ -7,6 +7,7 @@
 	</div>
 
 	<div class="content eh-mw6 center w-100 pt3">
-	<markdown lineNumbers [start]="1" [data]="article.body"></markdown>
+    <small class="date">{{ article.createdAt | date }}</small>
+    <markdown lineNumbers [start]="1" [data]="article.body"></markdown>
 	</div>
 </div>

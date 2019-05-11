@@ -7,11 +7,11 @@
         <app-article-preview
           class="card w-100"
           fxFlex="0 1 100%"
-          *ngFor="let article of articles"
+          *ngFor="let article of articles$ | async"
           [article]="article"></app-article-preview>
 
           <div class="app-article-preview"
-            [hidden]="!loading">
+            [hidden]="!articles$ | async">
               Loading articles...
           </div>
       </ng-container>
