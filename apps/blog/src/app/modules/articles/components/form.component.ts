@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Article } from 'src/app/core/models';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { ArticleService } from 'src/app/core/services';
 import { ActivatedRoute, Router } from '@angular/router';
 import { of } from 'rxjs';
 import { delay } from 'rxjs/operators';
+import { Article, ArticleService } from '../../../core';
 
 @Component({
   selector: 'app-form',

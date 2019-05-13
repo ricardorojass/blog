@@ -22,10 +22,7 @@
             "main": "apps/blog/src/main.ts",
             "polyfills": "apps/blog/src/polyfills.ts",
             "tsConfig": "apps/blog/tsconfig.app.json",
-            "assets": [
-              "apps/blog/src/favicon.ico",
-              "apps/blog/src/assets"
-            ],
+            "assets": ["apps/blog/src/favicon.ico", "apps/blog/src/assets"],
             "styles": [
               "apps/blog/src/styles.scss",
               "node_modules/prismjs/themes/prism-okaidia.css",
@@ -89,14 +86,9 @@
             "polyfills": "apps/blog/src/polyfills.ts",
             "tsConfig": "apps/blog/tsconfig.spec.json",
             "karmaConfig": "apps/blog/karma.conf.js",
-            "styles": [
-              "apps/blog/src/styles.scss"
-            ],
+            "styles": ["apps/blog/src/styles.scss"],
             "scripts": [],
-            "assets": [
-              "apps/blog/src/favicon.ico",
-              "apps/blog/src/assets"
-            ]
+            "assets": ["apps/blog/src/favicon.ico", "apps/blog/src/assets"]
           }
         },
         "lint": {
@@ -106,9 +98,7 @@
               "apps/blog/tsconfig.app.json",
               "apps/blog/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -134,10 +124,39 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/blog-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
+        }
+      }
+    },
+    "ngrx-router": {
+      "root": "libs/ngrx-router",
+      "sourceRoot": "libs/ngrx-router/src",
+      "projectType": "library",
+      "prefix": "blog",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ngrx-router/tsconfig.lib.json",
+              "libs/ngrx-router/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/ngrx-router/jest.config.js",
+            "tsConfig": "libs/ngrx-router/tsconfig.spec.json",
+            "setupFile": "libs/ngrx-router/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
         }
       }
     }

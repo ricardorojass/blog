@@ -1,3 +1,4 @@
+import { NgrxRouterModule } from '@blog/ngrx-router';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -35,6 +36,7 @@ import { NxModule } from '@nrwl/nx';
     HomeModule,
     AuthModule,
     NxModule.forRoot(),
+    NgrxRouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

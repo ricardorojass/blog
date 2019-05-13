@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Article } from 'src/app/core/models';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { of } from 'rxjs';
 import { delay } from 'rxjs/operators';
+import { Article } from 'apps/blog/src/app/core/models/article.model';
 
 @Component({
   selector: 'app-edit',
