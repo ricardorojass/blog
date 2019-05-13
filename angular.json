@@ -1,11 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
+  "newProjectRoot": "",
   "projects": {
     "blog": {
-      "root": "",
-      "sourceRoot": "src",
+      "root": "apps/blog",
+      "sourceRoot": "apps/blog/src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {
@@ -17,17 +17,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/blog",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "outputPath": "dist/apps/blog",
+            "index": "apps/blog/src/index.html",
+            "main": "apps/blog/src/main.ts",
+            "polyfills": "apps/blog/src/polyfills.ts",
+            "tsConfig": "apps/blog/tsconfig.app.json",
+            "assets": ["apps/blog/src/favicon.ico", "apps/blog/src/assets"],
             "styles": [
-              "src/styles.scss",
+              "apps/blog/src/styles.scss",
               "node_modules/prismjs/themes/prism-okaidia.css",
               "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.css"
             ],
@@ -42,8 +39,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "apps/blog/src/environments/environment.ts",
+                  "with": "apps/blog/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -85,43 +82,36 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
-            "karmaConfig": "src/karma.conf.js",
-            "styles": [
-              "src/styles.scss"
-            ],
+            "main": "apps/blog/src/test.ts",
+            "polyfills": "apps/blog/src/polyfills.ts",
+            "tsConfig": "apps/blog/tsconfig.spec.json",
+            "karmaConfig": "apps/blog/karma.conf.js",
+            "styles": ["apps/blog/src/styles.scss"],
             "scripts": [],
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ]
+            "assets": ["apps/blog/src/favicon.ico", "apps/blog/src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
+              "apps/blog/tsconfig.app.json",
+              "apps/blog/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
     },
     "blog-e2e": {
-      "root": "e2e/",
+      "root": "apps/blog-e2e",
       "projectType": "application",
       "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
+            "protractorConfig": "apps/blog-e2e/protractor.conf.js",
             "devServerTarget": "blog:serve"
           },
           "configurations": {
@@ -133,14 +123,46 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": "apps/blog-e2e/tsconfig.e2e.json",
+            "exclude": ["**/node_modules/**"]
           }
+        }
+      }
+    },
+    "ngrx-router": {
+      "root": "libs/ngrx-router",
+      "sourceRoot": "libs/ngrx-router/src",
+      "projectType": "library",
+      "prefix": "blog",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ngrx-router/tsconfig.lib.json",
+              "libs/ngrx-router/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/ngrx-router/jest.config.js",
+            "tsConfig": "libs/ngrx-router/tsconfig.spec.json",
+            "setupFile": "libs/ngrx-router/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
         }
       }
     }
   },
-  "defaultProject": "blog"
+  "defaultProject": "blog",
+  "cli": {
+    "defaultCollection": "@nrwl/schematics"
+  }
 }
