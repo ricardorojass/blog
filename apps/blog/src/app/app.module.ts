@@ -14,6 +14,7 @@ import { HomeModule } from './modules/home/home.module';
 import { CoreModule } from './core/core.module';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { AuthModule } from './auth/auth.module';
+import { NxModule } from '@nrwl/nx';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AuthModule } from './auth/auth.module';
     FlexLayoutModule,
     HomeModule,
     AuthModule,
+    NxModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
