@@ -3,6 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgModule } from '@angular/core';
+import { NxModule } from '@nrwl/nx';
+import { storeFreeze } from 'ngrx-store-freeze';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +20,7 @@ import { HomeModule } from './modules/home/home.module';
 import { CoreModule } from './core/core.module';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { AuthModule } from './auth/auth.module';
-import { NxModule } from '@nrwl/nx';
+import { environment } from '../environments/environment.prod';
 
 @NgModule({
   declarations: [
@@ -36,6 +41,9 @@ import { NxModule } from '@nrwl/nx';
     HomeModule,
     AuthModule,
     NxModule.forRoot(),
+    StoreModule.forRoot({}, { metaReducers: !environment.production ? [storeFreeze] : [] }),
+    EffectsModule.forRoot([]),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
     NgrxRouterModule,
   ],
   providers: [],
