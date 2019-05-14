@@ -16,6 +16,9 @@
     },
     "ngrx-router": {
       "tags": []
+    },
+    "home": {
+      "tags": []
     }
   }
 }

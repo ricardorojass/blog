@@ -14,7 +14,8 @@
     "lib": ["es2018", "dom"],
     "paths": {
       "@blog/*": ["libs/*"],
-      "@blog/ngrx-router": ["libs/ngrx-router/src/index.ts"]
+      "@blog/ngrx-router": ["libs/ngrx-router/src/index.ts"],
+      "@blog/home": ["libs/home/src/index.ts"]
     }
   }
 }
